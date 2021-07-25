@@ -22,7 +22,7 @@ void L293 :: forceStop( uint16_t handlingTime )
 		this->stop();
 	}
 
-void L293 :: forward( uint8_t _PWMDC )
+void L293 :: forward( uint16_t _PWMDC )
 	{
 		if( _PWMDC > 0 ) RawPWMDC = _PWMDC;
 
@@ -32,7 +32,7 @@ void L293 :: forward( uint8_t _PWMDC )
 		analogWrite( enablePin, this->getPWMDC() );
 	}
 
-void L293 :: back( uint8_t _PWMDC )
+void L293 :: back( uint16_t _PWMDC )
 	{
 		if( _PWMDC > 0 ) RawPWMDC = _PWMDC;
 

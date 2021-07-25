@@ -13,4 +13,4 @@
 #pragma once
 
 #include "L293_std.hpp"
-#include "L293_twoWire.hpp"
+#include "L293_twoWires.hpp"
