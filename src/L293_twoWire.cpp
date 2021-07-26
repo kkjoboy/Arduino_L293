@@ -11,7 +11,7 @@ L293_twoWire :: L293_twoWire( uint8_t _enablePin, uint8_t _directionPin, int16_t
 		PWMOffset = _PWMOffset;
 	}
 
-void L293_twoWire :: forward( uint8_t _PWMDC )
+void L293_twoWire :: forward( uint16_t _PWMDC )
 	{
 		if( _PWMDC ) RawPWMDC = _PWMDC ;
 
@@ -20,7 +20,7 @@ void L293_twoWire :: forward( uint8_t _PWMDC )
 		analogWrite( enablePin, this->getPWMDC() );
 	}
 
-void L293_twoWire :: back( uint8_t _PWMDC )
+void L293_twoWire :: back( uint16_t _PWMDC )
 	{
 		if( _PWMDC ) RawPWMDC = _PWMDC ;
 

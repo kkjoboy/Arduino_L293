@@ -14,11 +14,11 @@ class L293 : public L293_base
 
 			L293( uint8_t _enablePin, uint8_t _forwardPin, uint8_t _reversePin, int16_t _speedOffset = 0 );
 
-			void forceStop( uint16_t handlingTime );	///< Stops the motor by electrically braking it
-			bool isForceStopped() const ;						///< Tells the information about the motor that the name says
+			void forceStop( uint16_t handlingTime );		///< Stops the motor by electrically braking it
+			bool isForceStopped() const ;					///< Tells the information about the motor that the name says
 
-			void forward( uint16_t _PWMDC = 0 ) override ; ///< Makes the motor to go forward and sets a new speed value
-			void back( uint16_t _PWMDC = 0 )		 override ; ///< Makes the motor to go reverse and sets a new speed value
+			void forward( uint16_t _PWMDC = 0 ) override ; 	///< Makes the motor to go forward and sets a new speed value
+			void back( uint16_t _PWMDC = 0 )	override ; 	///< Makes the motor to go reverse and sets a new speed value
 			bool isForward() const override ;
 			bool isReverse() const override ;
 			bool isStopped() const override ;

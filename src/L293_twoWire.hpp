@@ -16,8 +16,8 @@ class L293_twoWire : public L293_base
 
 			L293_twoWire( uint8_t _enablePin, uint8_t _directionPin, int16_t _PWMOffset = 0 ) ;
 
-			void forward( uint8_t _PWMDC = 0 ) override ; ///< Makes the motor to go forward and optionally sets a new speed value
-			void back( uint8_t _PWMDC = 0 )		 override ; ///< Makes the motor to go reverse and optionally sets a new speed value
+			void forward( uint16_t _PWMDC = 0 ) override ; 	///< Makes the motor to go forward and optionally sets a new speed value
+			void back( uint16_t _PWMDC = 0 )	override ; 	///< Makes the motor to go reverse and optionally sets a new speed value
 			bool isForward() const override ;
 			bool isReverse() const override ;
 			bool isStopped() const override ;
